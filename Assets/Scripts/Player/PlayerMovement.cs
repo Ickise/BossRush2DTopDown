@@ -33,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] Vector2 force;
 
+    [SerializeField] AudioClip dashAudio;
+
     void Awake()
     {
         player = this;
@@ -83,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
     void SetPlayerSprint()
     {
         currentSpeed = speed;
+
         if (canSprint)
         {
             if (sprintTime > minSprintTime)
@@ -104,6 +107,8 @@ public class PlayerMovement : MonoBehaviour
         {
             if (timeBeforeDash == maxTimeBeforeDash)
             {
+                AudioManager._instance.PlaySFX(dashAudio);
+
                 force = new Vector2(smoothDirection.x * 6f, smoothDirection.y * 6f);
                 playerRigidbody2D.velocity = force * currentSpeed;
                 timeBeforeDash = minSprintTime;

@@ -118,7 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3f9068d5dfbf6e4da61c6e14e0d19fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fall: {fileID: 8300000, guid: 2bc4f4aff6fc11b44b207dc84fb18f19, type: 3}
   explosionAudio: {fileID: 8300000, guid: 2af514d92681de143b6df1f670e08788, type: 3}
 --- !u!1 &6498186470856197629
 GameObject:

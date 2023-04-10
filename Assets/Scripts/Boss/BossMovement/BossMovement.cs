@@ -10,15 +10,16 @@ public class BossMovement : MonoBehaviour
 
     [SerializeField] Ease ease;
 
-    [Header("Données")]
-    Rigidbody2D bossRigidBody2D;
-
     [SerializeField] int actualTarget;
+
     int newPoint;
+
+    Rigidbody2D bossRigidBody2D;
 
     void Start()
     {
         transform.position = pointDestinations[0].position;
+
         bossRigidBody2D = GetComponent<Rigidbody2D>();
     }
 
@@ -34,10 +35,8 @@ public class BossMovement : MonoBehaviour
         transform.DOLocalMove(pointDestinations[newPoint].position, speed)
                     .SetSpeedBased()
                     .SetEase(ease)
-                    // .SetDelay(delay)
                     .OnComplete(Fly);
     }
-
     public void SetFirstPoint()
     {
         newPoint = 0;

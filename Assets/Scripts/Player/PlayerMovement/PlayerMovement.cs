@@ -5,9 +5,10 @@ public class PlayerMovement : PlayerBase
 {
     public Vector2 direction;
     public Vector2 smoothDirection;
-    Vector2 smoothVelocity;
 
     public float currentSpeed = 5;
+
+    Vector2 smoothVelocity;
 
     public void Move(InputAction.CallbackContext callback)
     {

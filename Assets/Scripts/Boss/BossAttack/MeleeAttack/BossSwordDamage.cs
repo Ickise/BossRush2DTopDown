@@ -23,9 +23,10 @@ public class BossSwordDamage : MonoBehaviour
         {
             var player = other.GetComponent<Life>();
             player.Damage(damage);
+
             AudioManager._instance.PlaySFX(hitClip);
-            cinemachineImpulseSource.GenerateImpulseWithForce(force);
             Invincibility.invincibility.PlayerInvincibility();
+            cinemachineImpulseSource.GenerateImpulseWithForce(force);
         }
     }
 }

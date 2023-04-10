@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class WeaponRotation : PlayerBase
 {
+    [Header("Setup")]
     [SerializeField] Vector2 weaponPositionXPositif;
     [SerializeField] Vector2 weaponPositionXNegatif;
 

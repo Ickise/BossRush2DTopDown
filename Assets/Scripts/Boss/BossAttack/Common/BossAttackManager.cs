@@ -35,7 +35,6 @@ public class BossAttackManager : MonoBehaviour
               .SetSpeedBased()
               .SetEase(ease);
     }
-
     public void GetRandomInt()
     {
         randomIntForAttack = Random.Range(1, numberOfAttack);

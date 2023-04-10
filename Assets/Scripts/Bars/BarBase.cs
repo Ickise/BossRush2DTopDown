@@ -23,10 +23,4 @@ public class BarBase : MonoBehaviour
 
         bar.color = barColor;
     }
-
-    // protected void SetBar(float target)
-    // {
-    //     BarFiller(target);
-    //     ColorChanger(target, emptyColor, fullColor);
-    // }
 }

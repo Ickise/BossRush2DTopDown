@@ -3,15 +3,14 @@ using UnityEngine.InputSystem;
 
 public class SwitchWeapon : MonoBehaviour
 {
-    [Header("Data")]
+    [Header("Set up")]
     [SerializeField] int currentWeaponIndex;
-    int totalWeapons = 1;
 
     [SerializeField] GameObject[] guns;
-
-    [Header("Setup")]
     [SerializeField] GameObject weaponHolder;
     [SerializeField] GameObject currentGun;
+
+    int totalWeapons = 1;
 
     void Start()
     {

@@ -11,9 +11,11 @@ public class RainAttack : MonoBehaviour
     [SerializeField] AudioClip hitClip;
 
     CinemachineImpulseSource cinemachineImpulseSource;
+
     void Start()
     {
         cinemachineImpulseSource = FindObjectOfType<CinemachineImpulseSource>();
+
         Destroy(GetComponentInParent<Collider2D>().gameObject, 1.1f);
     }
 
@@ -23,9 +25,10 @@ public class RainAttack : MonoBehaviour
         {
             var player = other.GetComponent<Life>();
             player.Damage(damage);
+
             AudioManager._instance.PlaySFX(hitClip);
-            cinemachineImpulseSource.GenerateImpulseWithForce(force);
             Invincibility.invincibility.PlayerInvincibility();
+            cinemachineImpulseSource.GenerateImpulseWithForce(force);
         }
     }
 }

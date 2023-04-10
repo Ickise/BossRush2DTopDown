@@ -2,25 +2,16 @@ using UnityEngine;
 
 public class PlayerRotation : PlayerBase
 {
-    SpriteRenderer weaponSpriteRenderer;
 
-    public Vector3 playerScale;
-
-    [Header("Setup")]
+    [Header("Set up")]
     [SerializeField] Sprite frontSprite;
     [SerializeField] Sprite backSprite;
 
     [SerializeField] SpriteRenderer playerSpriteRenderer;
 
-    [SerializeField] GameObject weaponSwitching;
-
     [SerializeField] PlayerMovement playerMovement;
 
-    [SerializeField] Vector2 weaponPositionXPositif;
-    [SerializeField] Vector2 weaponPositionXNegatif;
-
-    [SerializeField] Quaternion weaponRotationXPositif;
-    [SerializeField] Quaternion weaponRotationXNegatif;
+    public Vector3 playerScale;
 
     void Update()
     {

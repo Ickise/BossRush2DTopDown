@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BossRainAttack : MonoBehaviour
@@ -24,7 +22,8 @@ public class BossRainAttack : MonoBehaviour
         for (int i = 0; i < numberOfAttackZones; i++)
         {
             float distance = Random.Range(minDistance, maxDistance);
-            Vector3 position = transform.position * distance; //+ Random.onUnitSphere 
+            Vector3 position = transform.position * distance; 
+            
             Instantiate(visualMark, position, Quaternion.identity);
         }
     }

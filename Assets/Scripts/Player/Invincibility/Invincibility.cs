@@ -10,6 +10,7 @@ public class Invincibility : MonoBehaviour
     [SerializeField] SpriteRenderer playerSprite;
 
     [SerializeField] GameObject weaponParent;
+    
     SpriteRenderer weapon;
 
     Collider2D playerCollider2D;

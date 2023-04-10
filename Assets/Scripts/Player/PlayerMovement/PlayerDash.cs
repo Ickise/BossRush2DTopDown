@@ -4,8 +4,6 @@ using System.Collections;
 
 public class PlayerDash : PlayerBase
 {
-    bool canDash;
-
     [Header("Set up")]
     public float timeBeforeDash = 5f;
     public float maxTimeBeforeDash = 5f;
@@ -21,6 +19,7 @@ public class PlayerDash : PlayerBase
 
     float currentSpeed = 5;
 
+    bool canDash;
 
     public void Dash(InputAction.CallbackContext callback)
     {

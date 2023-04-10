@@ -3,9 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMeleeAttack : MonoBehaviour
 {
-    bool canMeleeAttack;
-
-    [Header("Setup")]
+    [Header("Set up")]
     [SerializeField] float timeBeforeAttack;
     [SerializeField] float maxTimeBeforeAttack = 1f;
     [SerializeField] float minTimeBeforeAttack = 0f;
@@ -20,6 +18,8 @@ public class PlayerMeleeAttack : MonoBehaviour
 
     [SerializeField] AudioClip swordSlash;
     [SerializeField] AudioClip hitBoss;
+
+    bool canMeleeAttack;
 
     void Start()
     {

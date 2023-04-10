@@ -3,11 +3,7 @@ using UnityEngine;
 
 public class PlayerRangeAttack : MonoBehaviour
 {
-    bool canRangeAttack;
-
-    Vector2 mousePosition;
-
-    [Header("Setup")]
+    [Header("Set up")]
     [SerializeField] float timeBeforeAttack;
     [SerializeField] float maxTimeBeforeAttack = 1f;
     [SerializeField] float minTimeBeforeAttack = 0f;
@@ -17,6 +13,10 @@ public class PlayerRangeAttack : MonoBehaviour
     [SerializeField] Transform projectile;
 
     [SerializeField] AudioClip shoot;
+
+    bool canRangeAttack;
+
+    Vector2 mousePosition;
 
     public void Attack(InputAction.CallbackContext callback)
     {

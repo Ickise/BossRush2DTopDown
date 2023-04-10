@@ -19,6 +19,7 @@ public class PlayerMeleeAttack : MonoBehaviour
     [SerializeField] int damage;
 
     [SerializeField] AudioClip swordSlash;
+    [SerializeField] AudioClip hitBoss;
 
     void Start()
     {
@@ -61,6 +62,7 @@ public class PlayerMeleeAttack : MonoBehaviour
         {
             var target = other.GetComponent<Life>();
             target.Damage(damage);
+            AudioManager._instance.PlaySFX(hitBoss);
         }
     }
 

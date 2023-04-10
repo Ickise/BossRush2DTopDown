@@ -20,7 +20,7 @@ public class BossAttackManager : MonoBehaviour
 
     void Start()
     {
-        bossAnimator.SetInteger("State", 2);
+        bossAnimator.SetInteger("State", 1);
 
         bossRigidbody2D = GetComponent<Rigidbody2D>();
     }

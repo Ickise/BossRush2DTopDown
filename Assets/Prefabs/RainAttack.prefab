@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3736161630502375517}
   - component: {fileID: 1429259383236245970}
   - component: {fileID: 6525529469987552846}
+  - component: {fileID: 9054992677399972776}
   m_Layer: 0
   m_Name: Anim
   m_TagString: Untagged
@@ -99,12 +100,26 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.22, y: 1.17}
+  m_Size: {x: 0.81, y: 0.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9054992677399972776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3711879393701404457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3f9068d5dfbf6e4da61c6e14e0d19fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fall: {fileID: 8300000, guid: 2bc4f4aff6fc11b44b207dc84fb18f19, type: 3}
+  explosionAudio: {fileID: 8300000, guid: 2af514d92681de143b6df1f670e08788, type: 3}
 --- !u!1 &6498186470856197629
 GameObject:
   m_ObjectHideFlags: 0

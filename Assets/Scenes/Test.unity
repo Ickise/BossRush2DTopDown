@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 243021122}
   - component: {fileID: 243021123}
   - component: {fileID: 243021125}
-  - component: {fileID: 243021124}
   m_Layer: 0
   m_Name: SwordVisual
   m_TagString: Untagged
@@ -209,32 +208,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &243021124
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 243021121}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0007475689, y: 0.15923482}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.4950162, y: 0.18777488}
-    oldSize: {x: 0.15, y: 0.51}
-    newSize: {x: 0.15, y: 0.51}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.15, y: 0.51}
-  m_EdgeRadius: 0
 --- !u!114 &243021125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -751,6 +724,7 @@ GameObject:
   - component: {fileID: 805214031}
   - component: {fileID: 805214033}
   - component: {fileID: 805214032}
+  - component: {fileID: 805214034}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -785,8 +759,104 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5a2c0f450fc89942b6f2d45692ac173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioSource: {fileID: 805214033}
+  _audioSource: {fileID: 805214034}
 --- !u!82 &805214033
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805214030}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 396bf38297885664c88701d020ad09c7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.15
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &805214034
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -798,7 +868,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.45
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1451,6 +1521,7 @@ GameObject:
   - component: {fileID: 1414644060}
   - component: {fileID: 1414644059}
   - component: {fileID: 1414644061}
+  - component: {fileID: 1414644062}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -1491,9 +1562,10 @@ MonoBehaviour:
   minTimeBeforeAttack: 0
   playerRotation: {fileID: 1308587777}
   playerAnimator: {fileID: 1414644060}
-  swordBoxCollider2D: {fileID: 243021124}
+  swordBoxCollider2D: {fileID: 1414644062}
   damage: 3
-  swordSlash: {fileID: 0}
+  swordSlash: {fileID: 8300000, guid: 771af3bcd194c3e40b5f0f2971523e1e, type: 3}
+  hitBoss: {fileID: 8300000, guid: b1c20f7258c024c48a993550d6173b1a, type: 3}
 --- !u!95 &1414644060
 Animator:
   serializedVersion: 4
@@ -1610,6 +1682,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!61 &1414644062
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414644055}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.16428581, y: -0.000000029802322}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2639994, y: 0.6057138}
+  m_EdgeRadius: 0
 --- !u!1 &1519588678
 GameObject:
   m_ObjectHideFlags: 0
@@ -2217,7 +2315,7 @@ MonoBehaviour:
   sword: {fileID: 1567334744}
   bossRigidBody2D: {fileID: 1825407338}
   playerTransform: {fileID: 1308587774}
-  speed: 3
+  speed: 5
   attackRange: 1.5
 --- !u!82 &1825407346
 AudioSource:
@@ -2231,7 +2329,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4e43ef6775dcc8c40bda4a3b2421a610, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2327,7 +2425,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b10b8d2146cd74dba6db51ae843057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMeleeAttack: {fileID: 8300000, guid: 77ad969d211db934abafda82041669aa, type: 3}
+  startMeleeAttackAudio: {fileID: 8300000, guid: 77ad969d211db934abafda82041669aa, type: 3}
+  endOfWaitingAudio: {fileID: 8300000, guid: cf3878339160bab4da955dd9e396c287, type: 3}
 --- !u!1 &1872461953
 GameObject:
   m_ObjectHideFlags: 0
@@ -2484,7 +2583,7 @@ MonoBehaviour:
   minTimeBeforeAttack: 0
   playerAnimator: {fileID: 2108861597}
   projectile: {fileID: 4727165633673893516, guid: ec801c651f1209646ba76a0290b9fec9, type: 3}
-  shoot: {fileID: 0}
+  shoot: {fileID: 8300000, guid: b48da30aded1df146a4a02efc88eb119, type: 3}
 --- !u!114 &2108861599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2511,7 +2610,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 245b8b3460d6d954685a83a3c8879796, type: 3}
+  m_audioClip: {fileID: 8300000, guid: cda683f46b1928640a419287357787be, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1

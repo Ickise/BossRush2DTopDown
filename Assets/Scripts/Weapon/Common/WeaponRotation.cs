@@ -1,12 +1,14 @@
 using UnityEngine;
 
-public class WeaponRotation : MonoBehaviour
+public class WeaponRotation : PlayerBase
 {
     [SerializeField] Vector2 weaponPositionXPositif;
     [SerializeField] Vector2 weaponPositionXNegatif;
 
     [SerializeField] Quaternion weaponRotationXPositif;
     [SerializeField] Quaternion weaponRotationXNegatif;
+
+    [SerializeField] PlayerMovement playerMovement;
 
     void Update()
     {
@@ -15,12 +17,12 @@ public class WeaponRotation : MonoBehaviour
 
     public void SetWeaponRotation()
     {
-        if (PlayerMovement.player.direction.x > 0f)
+        if (playerMovement.direction.x > 0f)
         {
             gameObject.transform.localPosition = weaponPositionXPositif;
             gameObject.transform.localRotation = weaponRotationXPositif;
         }
-        else if (PlayerMovement.player.direction.x < 0f)
+        else if (playerMovement.direction.x < 0f)
         {
             gameObject.transform.localPosition = weaponPositionXNegatif;
             gameObject.transform.localRotation = weaponRotationXNegatif;

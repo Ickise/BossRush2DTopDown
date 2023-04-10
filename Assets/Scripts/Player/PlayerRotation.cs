@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerRotation : MonoBehaviour
+public class PlayerRotation : PlayerBase
 {
     SpriteRenderer weaponSpriteRenderer;
 
@@ -13,6 +13,8 @@ public class PlayerRotation : MonoBehaviour
     [SerializeField] SpriteRenderer playerSpriteRenderer;
 
     [SerializeField] GameObject weaponSwitching;
+
+    [SerializeField] PlayerMovement playerMovement;
 
     [SerializeField] Vector2 weaponPositionXPositif;
     [SerializeField] Vector2 weaponPositionXNegatif;
@@ -27,29 +29,16 @@ public class PlayerRotation : MonoBehaviour
 
     void RotateInDirectionOfInput()
     {
-        if (PlayerMovement.player.direction.x != 0f)
+        if (playerMovement.direction.x != 0f)
         {
-            // weaponSpriteRenderer = weaponSwitching.GetComponentInChildren<SpriteRenderer>();
-
-            // if (PlayerMovement.player.direction.x >= 0f)
-            // {
-            //     weaponSpriteRenderer.gameObject.transform.localPosition = weaponPositionXPositif;
-            //     weaponSpriteRenderer.gameObject.transform.localRotation = weaponRotationXPositif;
-            // }
-            // else if (PlayerMovement.player.direction.x <= 0f)
-            // {
-            //     weaponSpriteRenderer.gameObject.transform.localPosition = weaponPositionXNegatif;
-            //     weaponSpriteRenderer.gameObject.transform.localRotation = weaponRotationXNegatif;
-            // }
-
             playerScale = playerSpriteRenderer.transform.localScale;
-            playerScale.x = Mathf.Sign(PlayerMovement.player.direction.x);
+            playerScale.x = Mathf.Sign(playerMovement.direction.x);
             playerSpriteRenderer.transform.localScale = playerScale;
         }
 
-        if (PlayerMovement.player.direction.y != 0f)
+        if (playerMovement.direction.y != 0f)
         {
-            playerSpriteRenderer.sprite = PlayerMovement.player.direction.y > 0f ? backSprite : frontSprite;
+            playerSpriteRenderer.sprite = playerMovement.direction.y > 0f ? backSprite : frontSprite;
         }
     }
 }

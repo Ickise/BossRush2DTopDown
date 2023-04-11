@@ -17,8 +17,6 @@ public class PlayerDash : PlayerBase
 
     [SerializeField] AudioClip dashAudio;
 
-    float currentSpeed = 5;
-
     bool canDash;
 
     public void Dash(InputAction.CallbackContext callback)
@@ -40,7 +38,8 @@ public class PlayerDash : PlayerBase
                 AudioManager._instance.PlaySFX(dashAudio);
 
                 force = new Vector2(playerMovement.smoothDirection.x * forceValue, playerMovement.smoothDirection.y * forceValue);
-                playerRigidbody2D.velocity = force * currentSpeed;
+
+                playerRigidbody2D.AddForce(force * playerMovement.currentSpeed);
 
                 timeBeforeDash = minTimeBeforeDash;
 

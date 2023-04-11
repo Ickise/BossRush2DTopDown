@@ -33912,11 +33912,27 @@ MonoBehaviour:
     m_FrequencyGain: 1
     m_Duration: 1
     m_NoiseOffsets: {x: 0, y: 0, z: 0}
+--- !u!82 &805214033 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 926438860628273774, guid: 90c1967c53ff0fd41872a86d856d0c07, type: 3}
+  m_PrefabInstance: {fileID: 926438860028853567}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1308587774 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 600801980505084021, guid: 3fb8d4bc090b55c4e874ed172fdba406, type: 3}
   m_PrefabInstance: {fileID: 600801979520001675}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1308587778 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 600801980505084297, guid: 3fb8d4bc090b55c4e874ed172fdba406, type: 3}
+  m_PrefabInstance: {fileID: 600801979520001675}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d026d68219e3bb41b05c292b5b2eaf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1308587781 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 600801980505084302, guid: 3fb8d4bc090b55c4e874ed172fdba406, type: 3}
@@ -46125,6 +46141,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 600801980505084023, guid: 3fb8d4bc090b55c4e874ed172fdba406, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1308587781}
+    - target: {fileID: 600801980505084023, guid: 3fb8d4bc090b55c4e874ed172fdba406, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Dash
+      objectReference: {fileID: 0}
+    - target: {fileID: 600801980505084302, guid: 3fb8d4bc090b55c4e874ed172fdba406, type: 3}
+      propertyPath: force.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 600801980505084302, guid: 3fb8d4bc090b55c4e874ed172fdba406, type: 3}
+      propertyPath: force.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 600801980505084303, guid: 3fb8d4bc090b55c4e874ed172fdba406, type: 3}
+      propertyPath: invincibilityTime
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fb8d4bc090b55c4e874ed172fdba406, type: 3}
 --- !u!1001 &926438860028853567
@@ -46268,6 +46304,10 @@ PrefabInstance:
       value: AngelBoss
       objectReference: {fileID: 0}
     - target: {fileID: 3422780562910060284, guid: 6378cd8c586c9254d8b7373f82704a7b, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422780562910060284, guid: 6378cd8c586c9254d8b7373f82704a7b, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 1308587774}
@@ -46280,6 +46320,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2422074699976151833, guid: 2ebb76444c158d34ba17aed467e82af2, type: 3}
+      propertyPath: bossLife
+      value: 
+      objectReference: {fileID: 1825407333}
+    - target: {fileID: 2422074699976151833, guid: 2ebb76444c158d34ba17aed467e82af2, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 805214033}
+    - target: {fileID: 3911889233234096778, guid: 2ebb76444c158d34ba17aed467e82af2, type: 3}
+      propertyPath: playerLife
+      value: 
+      objectReference: {fileID: 1308587778}
+    - target: {fileID: 3911889233234096778, guid: 2ebb76444c158d34ba17aed467e82af2, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 805214033}
     - target: {fileID: 7065514323859409080, guid: 2ebb76444c158d34ba17aed467e82af2, type: 3}
       propertyPath: life
       value: 

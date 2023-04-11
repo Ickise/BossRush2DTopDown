@@ -24,6 +24,7 @@ public class PlayerMovement : PlayerBase
     {
         smoothDirection = Vector2.SmoothDamp(smoothDirection, direction, ref smoothVelocity, 0.1f);
 
+        // playerRigidbody2D.AddForce(100 * Time.deltaTime * smoothDirection.normalized);
         playerRigidbody2D.velocity = smoothDirection * currentSpeed;
     }
 }
